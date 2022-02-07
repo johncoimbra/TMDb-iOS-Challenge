@@ -124,7 +124,7 @@ class TheMovieDBService {
     // MARK: - Get Similar Movies
     func fetchPopular(movie_id: Int, page: Int, onComplete: @escaping (Similar?) -> Void) {
         let url: String
-        url = "\(API_BASE)\(MOVIE)\(movie_id)\(SIMILAR)?api_key=\(API_KEY)&page=\(page)"
+        url = "\(API_BASE)\(MOVIE)\(movie_id)\(SIMILAR)api_key=\(API_KEY)&page=\(page)"
         print("DEBUG: url Similar...: \(url)")
         
         Alamofire.request(url).responseJSON { (response) in
