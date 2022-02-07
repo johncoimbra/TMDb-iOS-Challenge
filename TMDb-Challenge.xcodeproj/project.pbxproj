@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D406999655D5228A0CB3557 /* Pods_TMDb_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9C16C35D6A12FF78BAEB4E /* Pods_TMDb_Challenge.framework */; };
 		78C7465427B0263F00C6B19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7465327B0263F00C6B19A /* AppDelegate.swift */; };
 		78C7465627B0263F00C6B19A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7465527B0263F00C6B19A /* SceneDelegate.swift */; };
 		78C7465827B0263F00C6B19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7465727B0263F00C6B19A /* ViewController.swift */; };
 		78C7465B27B0263F00C6B19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C7465927B0263F00C6B19A /* Main.storyboard */; };
 		78C7465D27B0264100C6B19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78C7465C27B0264100C6B19A /* Assets.xcassets */; };
 		78C7466027B0264100C6B19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C7465E27B0264100C6B19A /* LaunchScreen.storyboard */; };
+		78C7466A27B0282200C6B19A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7466927B0282200C6B19A /* Constants.swift */; };
+		78C7466C27B029FE00C6B19A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7466B27B029FE00C6B19A /* UIColor.swift */; };
+		78C7466E27B02A8F00C6B19A /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7466D27B02A8F00C6B19A /* UIImageView.swift */; };
+		78C7467027B08BC900C6B19A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7466F27B08BC900C6B19A /* UILabel.swift */; };
+		78C7467227B08D5500C6B19A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467127B08D5500C6B19A /* UIView.swift */; };
+		78C7467427B090C900C6B19A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467327B090C900C6B19A /* UIViewController.swift */; };
+		78C7467627B092B600C6B19A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467527B092B600C6B19A /* Utilities.swift */; };
+		78C7467A27B09D6600C6B19A /* TheMovieDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467927B09D6600C6B19A /* TheMovieDBService.swift */; };
+		78C7467D27B09FFA00C6B19A /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467C27B09FFA00C6B19A /* Movies.swift */; };
+		78C7467F27B0B2CE00C6B19A /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7467E27B0B2CE00C6B19A /* MovieDetails.swift */; };
+		78C7468127B0B5A900C6B19A /* Similar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7468027B0B5A900C6B19A /* Similar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20AC4B2BEE00E5F10F61EAD3 /* Pods-TMDb-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDb-Challenge.release.xcconfig"; path = "Target Support Files/Pods-TMDb-Challenge/Pods-TMDb-Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		32402FC8D255D0ED283C243D /* Pods-TMDb-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDb-Challenge.debug.xcconfig"; path = "Target Support Files/Pods-TMDb-Challenge/Pods-TMDb-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		78C7465027B0263F00C6B19A /* TMDb-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDb-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C7465327B0263F00C6B19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C7465527B0263F00C6B19A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,18 @@
 		78C7465C27B0264100C6B19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78C7465F27B0264100C6B19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78C7466127B0264100C6B19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C7466927B0282200C6B19A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78C7466B27B029FE00C6B19A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		78C7466D27B02A8F00C6B19A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		78C7466F27B08BC900C6B19A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		78C7467127B08D5500C6B19A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		78C7467327B090C900C6B19A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		78C7467527B092B600C6B19A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		78C7467927B09D6600C6B19A /* TheMovieDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBService.swift; sourceTree = "<group>"; };
+		78C7467C27B09FFA00C6B19A /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		78C7467E27B0B2CE00C6B19A /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		78C7468027B0B5A900C6B19A /* Similar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Similar.swift; sourceTree = "<group>"; };
+		7B9C16C35D6A12FF78BAEB4E /* Pods_TMDb_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDb_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D406999655D5228A0CB3557 /* Pods_TMDb_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AA66A5FE8D656CE85970505 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32402FC8D255D0ED283C243D /* Pods-TMDb-Challenge.debug.xcconfig */,
+				20AC4B2BEE00E5F10F61EAD3 /* Pods-TMDb-Challenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3DA85887DF104D960D2F09EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C16C35D6A12FF78BAEB4E /* Pods_TMDb_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78C7464727B0263F00C6B19A = {
 			isa = PBXGroup;
 			children = (
 				78C7465227B0263F00C6B19A /* TMDb-Challenge */,
 				78C7465127B0263F00C6B19A /* Products */,
+				2AA66A5FE8D656CE85970505 /* Pods */,
+				3DA85887DF104D960D2F09EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +102,9 @@
 		78C7465227B0263F00C6B19A /* TMDb-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				78C7467B27B09FC000C6B19A /* Model */,
+				78C7467827B09D4C00C6B19A /* API */,
+				78C7466727B0270800C6B19A /* Utils */,
 				78C7465327B0263F00C6B19A /* AppDelegate.swift */,
 				78C7465527B0263F00C6B19A /* SceneDelegate.swift */,
 				78C7465727B0263F00C6B19A /* ViewController.swift */,
@@ -67,6 +116,38 @@
 			path = "TMDb-Challenge";
 			sourceTree = "<group>";
 		};
+		78C7466727B0270800C6B19A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				78C7466927B0282200C6B19A /* Constants.swift */,
+				78C7466B27B029FE00C6B19A /* UIColor.swift */,
+				78C7466D27B02A8F00C6B19A /* UIImageView.swift */,
+				78C7466F27B08BC900C6B19A /* UILabel.swift */,
+				78C7467127B08D5500C6B19A /* UIView.swift */,
+				78C7467327B090C900C6B19A /* UIViewController.swift */,
+				78C7467527B092B600C6B19A /* Utilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		78C7467827B09D4C00C6B19A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				78C7467927B09D6600C6B19A /* TheMovieDBService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		78C7467B27B09FC000C6B19A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78C7467C27B09FFA00C6B19A /* Movies.swift */,
+				78C7467E27B0B2CE00C6B19A /* MovieDetails.swift */,
+				78C7468027B0B5A900C6B19A /* Similar.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78C7466427B0264100C6B19A /* Build configuration list for PBXNativeTarget "TMDb-Challenge" */;
 			buildPhases = (
+				A29FE6FE422FB50AA99D258E /* [CP] Check Pods Manifest.lock */,
 				78C7464C27B0263F00C6B19A /* Sources */,
 				78C7464D27B0263F00C6B19A /* Frameworks */,
 				78C7464E27B0263F00C6B19A /* Resources */,
+				995900AE05A48DFE4E7695AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +216,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		995900AE05A48DFE4E7695AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMDb-Challenge/Pods-TMDb-Challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TMDb-Challenge/Pods-TMDb-Challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TMDb-Challenge/Pods-TMDb-Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A29FE6FE422FB50AA99D258E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TMDb-Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78C7464C27B0263F00C6B19A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C7467227B08D5500C6B19A /* UIView.swift in Sources */,
+				78C7468127B0B5A900C6B19A /* Similar.swift in Sources */,
 				78C7465827B0263F00C6B19A /* ViewController.swift in Sources */,
+				78C7467D27B09FFA00C6B19A /* Movies.swift in Sources */,
+				78C7467427B090C900C6B19A /* UIViewController.swift in Sources */,
+				78C7467F27B0B2CE00C6B19A /* MovieDetails.swift in Sources */,
+				78C7467A27B09D6600C6B19A /* TheMovieDBService.swift in Sources */,
 				78C7465427B0263F00C6B19A /* AppDelegate.swift in Sources */,
+				78C7467027B08BC900C6B19A /* UILabel.swift in Sources */,
 				78C7465627B0263F00C6B19A /* SceneDelegate.swift in Sources */,
+				78C7466A27B0282200C6B19A /* Constants.swift in Sources */,
+				78C7466E27B02A8F00C6B19A /* UIImageView.swift in Sources */,
+				78C7467627B092B600C6B19A /* Utilities.swift in Sources */,
+				78C7466C27B029FE00C6B19A /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +420,7 @@
 		};
 		78C7466527B0264100C6B19A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32402FC8D255D0ED283C243D /* Pods-TMDb-Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +450,7 @@
 		};
 		78C7466627B0264100C6B19A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20AC4B2BEE00E5F10F61EAD3 /* Pods-TMDb-Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
