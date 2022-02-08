@@ -12,5 +12,5 @@ extension UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
     
-    static let aisdigital = UIColor.rgb(red: 0, green: 79, blue: 145)
+    static let mobile2you = UIColor.rgb(red: 0, green: 79, blue: 145)
 }
