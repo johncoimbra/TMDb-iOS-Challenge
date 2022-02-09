@@ -16,7 +16,7 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
     var similarMovies: [SimilarMovies] = []
     var currentPage: Int = 1
     var loadingMovies = false
-    var mostrarNomes: [String] = []
+    var showNames: [String] = []
     private var genreListArray: [GenreMovies] = []
     
     init() {
@@ -68,7 +68,7 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
     }
     
     func fetchGenresMovies() {
-        TheMovieDBService.shared.fetchGenerMovies(movie_id: movie_id!) { (info) in
+        TheMovieDBService.shared.fetchGenreMovies(movie_id: movie_id!) { (info) in
             if let info = info {
                 self.genreListArray = info.genres
                 DispatchQueue.main.async {
@@ -86,12 +86,12 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SlidePhotoMoviesCell
        
         let itensListArray = self.similarMovies[indexPath.row].genre_ids
-        self.mostrarNomes.removeAll()
+        self.showNames.removeAll()
         for listGenresOfItem in itensListArray {
             for genreName in self.genreListArray {
                 if genreName.id == listGenresOfItem {
-                    self.mostrarNomes.append(genreName.name)
-                    print("DEBUG: Mostrar Nomes: \(mostrarNomes)")
+                    self.showNames.append(genreName.name)
+                    print("DEBUG: Mostrar Nomes: \(showNames)")
                 }
             }
         }
@@ -100,7 +100,7 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
         let fullNameArray = fullData?.components(separatedBy: "-")
         let years = fullNameArray?[0]
         
-        let genres1 = mostrarNomes.description.replacingOccurrences(of: "[", with: "")
+        let genres1 = showNames.description.replacingOccurrences(of: "[", with: "")
         let genres2 = genres1.replacingOccurrences(of: "]", with: "")
         let genres3 = genres2.replacingOccurrences(of: "\"", with: "")
         

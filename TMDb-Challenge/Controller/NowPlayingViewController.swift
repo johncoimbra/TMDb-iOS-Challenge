@@ -83,7 +83,6 @@ extension NowPlayingViewController {
             if movies.count > 0 {
                 fetchNowPlaying()
             }
-            print("Loading more movies")
         }
     }
     

@@ -142,29 +142,8 @@ class TheMovieDBService {
         }
     }
     
-    // MARK: - Get Genre
-    func fetchPopular(movie_id: Int, onComplete: @escaping (GenreResponse?) -> Void) {
-        let url: String
-        url = "\(API_BASE)\(GENRE)\(MOVIE)\(LIST)api_key=\(API_KEY)"
-        print("DEBUG: url Genres...: \(url)")
-        
-        Alamofire.request(url).responseJSON { (response) in
-            guard let data = response.data else {
-                onComplete(nil)
-                return
-            }
-            do {
-                let genreInfo = try JSONDecoder().decode(GenreResponse.self, from: data)
-                onComplete(genreInfo)
-            } catch {
-                print(error.localizedDescription)
-                onComplete(nil)
-            }
-        }
-    }
-    
     //MARK: - Get Gener Movies
-    func fetchGenerMovies(movie_id: Int, onComplete: @escaping (GenreResponse?) -> Void) {
+    func fetchGenreMovies(movie_id: Int, onComplete: @escaping (GenreResponse?) -> Void) {
         let url: String
         url = "\(API_BASE)\(GENRE)\(MOVIE)\(LIST)api_key=\(API_KEY)"
         print("DEBUG: url Genres...:\(url)")
