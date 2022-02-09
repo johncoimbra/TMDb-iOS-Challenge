@@ -34,7 +34,6 @@ Layout da tela de detalhe dos filmes do app TodoMovies4 (tela: https://is4-ssl.m
 
 Ambas as telas permitem ao usuário clicar/tocar no filme e ser encaminhado para a **tela de detalhes do filme**.
 
-
 **Requisitos Utilizados:**
 
 - Design Pattern: MVC.
@@ -43,3 +42,15 @@ Ambas as telas permitem ao usuário clicar/tocar no filme e ser encaminhado para
 - O ícone de like (coração) deve mudar quando clicado, alternando entre preenchido e vazio.
 - Lista de filmes abaixo dos detalhes.
 - Desenvolvido utilizando a linguagem Swift.
+
+**Bibliotecas de Terceiros Utilizadas:**
+- Alamofire
+- Kingfisher
+
+Pod install:
+
+pod 'Alamofire', '~> 4.0'
+Base: https://cocoapods.org/pods/Alamofire
+
+pod 'Kingfisher', '~> 4.0'
+Base: https://cocoapods.org/pods/Kingfisher
