@@ -9,7 +9,6 @@ import UIKit
 
 class TopRatedCell: UICollectionViewCell {
     // MARK: - Properties
-    
     ///UI Image Filme
     lazy var topRatedImageView: UIImageView = {
         let iv = UIImageView()
@@ -59,5 +58,4 @@ class TopRatedCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

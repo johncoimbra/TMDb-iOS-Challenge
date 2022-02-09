@@ -20,7 +20,7 @@ struct SimilarMovies: Codable {
     var adult: Bool? = false
     var overview: String? = ""
     var release_date: String? = ""
-    var genre_ids: [Int]? = []
+    var genre_ids: [Int] = []
     var original_title: String? = ""
     var original_linguage: String? = ""
     var title: String? = ""
@@ -42,7 +42,7 @@ struct GenreResponse: Codable {
 }
 
 struct GenreMovies: Codable {
-    var id: Int;
+    var id: Int
     var name: String
     
     enum CodingKeys: String, CodingKey {

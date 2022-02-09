@@ -11,7 +11,6 @@ import Kingfisher
 private let reuseIdentifier = "PopularCell"
 
 class PopularViewController: UICollectionViewController {
-    
     // MARK: - Properties
     var movies: [Movie] = []
     var loadingMovies = false
@@ -22,7 +21,6 @@ class PopularViewController: UICollectionViewController {
         super.viewDidLoad()
         configureUI()
         fetchPopular()
-        
     }
     
     // MARK: - API

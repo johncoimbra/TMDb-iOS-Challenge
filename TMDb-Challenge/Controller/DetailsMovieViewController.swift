@@ -38,7 +38,6 @@ class HeaderLayout: UICollectionViewFlowLayout {
     }
 }
 
-
 class DetailsMovieViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     //MARK: - Properties
     var movie_id: Int?
@@ -60,8 +59,6 @@ class DetailsMovieViewController: UICollectionViewController, UICollectionViewDe
         configureUI()
         fetchMovieDetails()
         fetchSimilarMovies()
-        print("movie_id: \(movie_id?.description ?? "")")
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,7 +88,6 @@ class DetailsMovieViewController: UICollectionViewController, UICollectionViewDe
         }
     }
     
-    //MARK: - API
     func fetchSimilarMovies() {
         TheMovieDBService.shared.fetchSimilarMovies(movie_id: movie_id!, page: currentPage) { (info) in
             if let info = info {
@@ -104,8 +100,6 @@ class DetailsMovieViewController: UICollectionViewController, UICollectionViewDe
         }
     }
     
-    //MARK: - Selectors
-    
     //MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .mobile2you
@@ -117,19 +111,16 @@ class DetailsMovieViewController: UICollectionViewController, UICollectionViewDe
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerMovieId)
         collectionView.register(InfoMovieCell.self, forCellWithReuseIdentifier: infoMovieId)
         collectionView.register(SimilarMoviesCell.self, forCellWithReuseIdentifier: similarMovieId)
-        
     }
 }
 
 extension DetailsMovieViewController {
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerMovieId, for: indexPath) as! HeaderView
-        
         
         if let urlPoster = URL(string: "\(moviesDetails?.getImageBackDropPath().description ?? "")") {
             header.imageMovie.kf.setImage(with: urlPoster)
@@ -149,54 +140,49 @@ extension DetailsMovieViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var returnCell = UICollectionViewCell()
         switch indexPath.item {
-        case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: infoMovieId, for: indexPath) as!
-            InfoMovieCell
-            cell.nameMovieLabel.text = "\(moviesDetails?.title?.description ?? "")"
-            cell.popularityLabel.text = "Popularity: \(moviesDetails?.popularity.rounded().description ?? "0.0")"
-            cell.likesLabel.text = "\(moviesDetails?.vote_count?.description ?? "") Likes"
-            returnCell = cell
-        case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: similarMovieId, for: indexPath) as! SimilarMoviesCell
-            cell.movie_id = movie_id
-            cell.similarMovies = similiarMovies
-            cell.loadSimilar()
-            cell.changeText()
-            returnCell = cell
-            returnCell = cell
-        default:
-            return UICollectionViewCell()
+            case 0:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: infoMovieId, for: indexPath) as!
+                InfoMovieCell
+                cell.nameMovieLabel.text = "\(moviesDetails?.title?.description ?? "")"
+                cell.popularityLabel.text = "Popularity: \(moviesDetails?.popularity.rounded().description ?? "0.0")"
+                cell.likesLabel.text = "\(moviesDetails?.vote_count?.description ?? "") Likes"
+                returnCell = cell
+            case 1:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: similarMovieId, for: indexPath) as! SimilarMoviesCell
+                cell.movie_id = movie_id
+                cell.similarMovies = similiarMovies
+                cell.loadSimilar()
+                cell.changeText()
+                returnCell = cell
+                returnCell = cell
+            default:
+                return UICollectionViewCell()
         }
         return returnCell
     }
-    
-   
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = UIScreen.main.bounds.width
         var height: CGFloat = UIScreen.main.bounds.width * 0.66
         
         switch indexPath.item {
-        case 0:
-            let cell = InfoMovieCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
-            cell.layoutIfNeeded()
-            
-            let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
-            height = estimativaTamanho.height
-        case 1:
-            let cell = SlidePhotoMoviesCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
-            cell.layoutIfNeeded()
-            
-            let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: width ))
-            height = estimativaTamanho.height
-        default:
-            return .init(width: width , height: height)
+            case 0:
+                let cell = InfoMovieCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
+                cell.layoutIfNeeded()
+                
+                let sizeEstimate = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
+                height = sizeEstimate.height
+            case 1:
+                let cell = SlidePhotoMoviesCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
+                cell.layoutIfNeeded()
+                
+                let sizeEstimate = cell.systemLayoutSizeFitting(CGSize(width: width, height: width ))
+                height = sizeEstimate.height
+            default:
+                return .init(width: width , height: height)
         }
-        
         return .init(width: width , height: height)
     }
-    
 }
 
 extension DetailsMovieViewController: HeaderViewDelegate {

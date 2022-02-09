@@ -8,7 +8,6 @@
 import UIKit
 
 class MovieCell: UICollectionViewCell {
-    
     // MARK: - Properties
     lazy var movieImageView: UIImageView = {
         let iv = UIImageView()
