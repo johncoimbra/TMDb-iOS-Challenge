@@ -105,7 +105,6 @@ extension ResultSearchViewController {
             if movies.count > 0 {
                 fetchSearch()
             }
-            print("Loading more movies")
         }
     }
     

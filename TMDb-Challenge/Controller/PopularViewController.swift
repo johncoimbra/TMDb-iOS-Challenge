@@ -75,7 +75,6 @@ extension PopularViewController {
             if movies.count > 0 {
                 fetchPopular()
             }
-            print("Loading more movies")
         }
     }
     
