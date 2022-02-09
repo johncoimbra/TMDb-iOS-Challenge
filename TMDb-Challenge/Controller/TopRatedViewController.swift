@@ -77,7 +77,6 @@ extension TopRatedViewController {
             if movies.count > 0 {
                 fetchTopRated()
             }
-            print("Loading more movies")
         }
     }
     

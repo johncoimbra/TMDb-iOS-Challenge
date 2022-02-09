@@ -91,7 +91,6 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
             for genreName in self.genreListArray {
                 if genreName.id == listGenresOfItem {
                     self.showNames.append(genreName.name)
-                    print("DEBUG: Mostrar Nomes: \(showNames)")
                 }
             }
         }
@@ -123,7 +122,6 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
             if similarMovies.count > 0 {
                 fetchSimilarMovies()
             }
-            print("Loading more movies")
         }
     }
     
