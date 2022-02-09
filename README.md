@@ -51,6 +51,5 @@ Pod install:
 
 pod 'Alamofire', '~> 4.0'
 Base: https://cocoapods.org/pods/Alamofire
-
 pod 'Kingfisher', '~> 4.0'
 Base: https://cocoapods.org/pods/Kingfisher
