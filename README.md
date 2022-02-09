@@ -49,7 +49,7 @@ Ambas as telas permitem ao usuário clicar/tocar no filme e ser encaminhado para
 
 Pod install:
 
-pod 'Alamofire', '~> 4.0'
+- pod 'Alamofire', '~> 4.0'
 Base: https://cocoapods.org/pods/Alamofire
-pod 'Kingfisher', '~> 4.0'
+- pod 'Kingfisher', '~> 4.0'
 Base: https://cocoapods.org/pods/Kingfisher
