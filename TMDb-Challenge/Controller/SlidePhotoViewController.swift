@@ -16,6 +16,8 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
     var similarMovies: [SimilarMovies] = []
     var currentPage: Int = 1
     var loadingMovies = false
+    var mostrarNomes: [String] = []
+    private var genreListArray: [GenreMovies] = []
     
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -25,6 +27,29 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionView.backgroundColor = .black
+        collectionView.register(SlidePhotoMoviesCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        fetchSimilarMovies()
+        fetchGenresMovies()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
     //MARK: - API
@@ -42,26 +67,15 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
         }
     }
     
-    //MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.backgroundColor = .black
-        collectionView.register(SlidePhotoMoviesCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        fetchSimilarMovies()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.tabBarController?.tabBar.isHidden = false
+    func fetchGenresMovies() {
+        TheMovieDBService.shared.fetchGenerMovies(movie_id: movie_id!) { (info) in
+            if let info = info {
+                self.genreListArray = info.genres
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,8 +84,29 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SlidePhotoMoviesCell
+       
+        let itensListArray = self.similarMovies[indexPath.row].genre_ids
+        self.mostrarNomes.removeAll()
+        for listGenresOfItem in itensListArray {
+            for genreName in self.genreListArray {
+                if genreName.id == listGenresOfItem {
+                    self.mostrarNomes.append(genreName.name)
+                    print("DEBUG: Mostrar Nomes: \(mostrarNomes)")
+                }
+            }
+        }
+        
+        let fullData = similarMovies[indexPath.row].release_date
+        let fullNameArray = fullData?.components(separatedBy: "-")
+        let years = fullNameArray?[0]
+        
+        let genres1 = mostrarNomes.description.replacingOccurrences(of: "[", with: "")
+        let genres2 = genres1.replacingOccurrences(of: "]", with: "")
+        let genres3 = genres2.replacingOccurrences(of: "\"", with: "")
+        
         cell.titleMovie.text = "\(similarMovies[indexPath.row].title ?? "")"
-        cell.overviewMovie.text = "\(similarMovies[indexPath.row].overview ?? "")"
+        cell.yearMovie.text = years
+        cell.genreMovie.text = genres3
         
         if let urlPoster = URL(string: "\(similarMovies[indexPath.row].getImagePosterPath())") {
             cell.imageSimilarMovies.kf.setImage(with: URL(string: "\(urlPoster)"))
@@ -88,7 +123,6 @@ class SlidePhotoMoviesViewController: UICollectionViewController, UICollectionVi
             if similarMovies.count > 0 {
                 fetchSimilarMovies()
             }
-            
             print("Loading more movies")
         }
     }

@@ -11,7 +11,6 @@ import Kingfisher
 private let reuseIdentifier = "TopRatedCell"
 
 class TopRatedViewController: UICollectionViewController {
-    
     // MARK: - Properties
     var movies: [Movie] = []
     var loadingMovies = false

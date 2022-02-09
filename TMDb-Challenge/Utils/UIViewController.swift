@@ -41,5 +41,4 @@ extension UIViewController {
     func dismiss() {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }

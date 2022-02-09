@@ -8,7 +8,6 @@
 import UIKit
 
 class MainTabController: UITabBarController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -41,5 +40,4 @@ class MainTabController: UITabBarController {
         nav.tabBarItem.title = title
         return nav
     }
-
 }

@@ -51,11 +51,9 @@ class HeaderView: UICollectionReusableView {
         containerView.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, height: 108)
     }
     
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     // MARK: - Selectors
     @objc func handleDismissal() {

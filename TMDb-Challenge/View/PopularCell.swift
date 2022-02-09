@@ -8,7 +8,6 @@
 import UIKit
 
 class PopularCell: UICollectionViewCell {
-    
     // MARK: - Properties
     lazy var popularImageView: UIImageView = {
         let iv = UIImageView()
@@ -43,5 +42,4 @@ class PopularCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

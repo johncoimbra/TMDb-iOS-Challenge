@@ -8,9 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
     // MARK: - Properties
-    
     /// UI Background Image
     private lazy var movieImageView: UIImageView = {
         let iv = UIImageView()
@@ -113,9 +111,5 @@ class SearchViewController: UIViewController {
         
         view.addSubview(stack)
         stack.anchor(top: infoLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 16, paddinRight: 16)
-        
-        
     }
-    
-
 }

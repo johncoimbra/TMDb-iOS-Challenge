@@ -11,7 +11,6 @@ import Kingfisher
 private let reuseIdentifier = "MovieCell"
 
 class NowPlayingViewController: UICollectionViewController {
-    
     // MARK: - Properties
     var movies: [Movie] = []
     var loadingMovies = false
@@ -46,8 +45,6 @@ class NowPlayingViewController: UICollectionViewController {
         collectionView.backgroundColor = .black
         title = "Now Playing"
     }
-
-
 }
 
 // MARK: - UICollectionViewDelegate/DataSource

@@ -8,7 +8,6 @@
 import UIKit
 
 class InfoMovieCell: UICollectionViewCell {
-    
     //MARK: - Properties
     var nameMovieLabel: UILabel = {
        let label = UILabel()
@@ -70,7 +69,6 @@ class InfoMovieCell: UICollectionViewCell {
     var flag: Bool = false
     
     //MARK: - Lifecycle
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -108,7 +106,6 @@ class InfoMovieCell: UICollectionViewCell {
     }
 
     //MARK: - Selectors
-    
     @objc func handleLike() {
         var systemImage = UIImage()
         

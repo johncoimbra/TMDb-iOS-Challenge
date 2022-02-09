@@ -11,7 +11,6 @@ import Kingfisher
 private let reuseIdentifier = "TopRatedCell"
 
 class ResultSearchViewController: UICollectionViewController {
-    
     //MARK: - Properties
     var name: String?
     var movies: [Movie] = []
@@ -24,7 +23,6 @@ class ResultSearchViewController: UICollectionViewController {
         super.viewDidLoad()
         configureUI()
         fetchSearch()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,7 +114,6 @@ extension ResultSearchViewController {
         controller.movie_id = movies[indexPath.row].id
         navigationController?.pushViewController(controller, animated: true)
     }
-    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
