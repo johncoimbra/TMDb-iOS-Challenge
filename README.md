@@ -6,17 +6,17 @@ Utilizando a API do The Movie DB, implementar uma tela com as informações de u
 
 **Endpoints do Desafio:**
 
-Details: https://developers.themoviedb.org/3/movies/get-movie-details
-Similar: https://developers.themoviedb.org/3/movies/get-similar-movies
-Genre: https://developers.themoviedb.org/3/genres/get-movie-list
-Images: https://developers.themoviedb.org/3/getting-started/images
+- Details: https://developers.themoviedb.org/3/movies/get-movie-details
+- Similar: https://developers.themoviedb.org/3/movies/get-similar-movies
+- Genre: https://developers.themoviedb.org/3/genres/get-movie-list
+- Images: https://developers.themoviedb.org/3/getting-started/images
 
 **Endpoints Bônus:**
 
-Now Playing: https://developers.themoviedb.org/3/movies/get-now-playing
-Popular: https://developers.themoviedb.org/3/movies/get-popular-movies
-Top Rated: https://developers.themoviedb.org/3/movies/get-top-rated-movies
-Search: https://developers.themoviedb.org/3/search/search-movies
+- Now Playing: https://developers.themoviedb.org/3/movies/get-now-playing
+- Popular: https://developers.themoviedb.org/3/movies/get-popular-movies
+- Top Rated: https://developers.themoviedb.org/3/movies/get-top-rated-movies
+- Search: https://developers.themoviedb.org/3/search/search-movies
 
 
 **Layout do Desafio**
